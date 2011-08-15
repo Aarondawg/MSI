@@ -260,7 +260,7 @@ Example:
          Name := 'Grand Exchange bank';
          Constant := LOC_GE_BANK;
          AtBank := True;
-         Tiles := [Point(3180, 3476)];
+         Tiles := [Point(3180, 3480)];
          Points := MSI_ConvertTilePath(Tiles);
          MinDistance := 20;
 
@@ -678,7 +678,16 @@ Example:
          Points := MSI_ConvertTilePath(Tiles);
          MinDistance := 10;
        end;
-
+     LOC_SV_TREES:
+       with MSI_Locations[Which] do
+       begin
+         Name := 'Seers Village Trees';
+         Constant := LOC_SV_TREES;
+         AtBank := False;
+         Tiles := [Point(2721, 3447)];
+         Points := MSI_ConvertTilePath(Tiles);
+         MinDistance := 25;
+       end;
      LOC_SV_BANK:
        with MSI_Locations[Which] do
        begin
